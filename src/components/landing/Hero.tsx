@@ -1,8 +1,11 @@
 'use client';
 // src/components/landing/Hero.tsx
 
-import { useEffect, useRef } from 'react';
+import { useActionState, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { addToWaitlist, FormState } from '@/app/actions';
+import { useFormStatus } from 'react-dom';
+import StatusModal from '../common/StatusModal';
 
 // --- Icon components remain the same ---
 const RocketIcon = () => (
@@ -23,6 +26,19 @@ const RocketIcon = () => (
         ></path>
     </svg>
 );
+function SubmitButton() {
+    const { pending } = useFormStatus(); // Ce hook nous dit si le formulaire est en cours d'envoi.
+
+    return (
+        <button
+            type="submit"
+            disabled={pending} // Le bouton est désactivé pendant l'envoi
+            className="flex-shrink-0 bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105 disabled:bg-orange-300 disabled:cursor-not-allowed"
+        >
+            {pending ? 'Joining...' : 'Join Waitlist'}
+        </button>
+    );
+}
 const UsersIcon = () => (
     <svg
         width="16"
@@ -80,9 +96,38 @@ const PerksIcon = () => (
     </svg>
 );
 
+interface ModalState {
+    isOpen: boolean;
+    title: string;
+    message: string;
+    status: 'success' | 'error';
+}
+
 export default function Hero() {
+    const initialState: FormState = { message: '', success: false };
+    const [state, formAction] = useActionState(addToWaitlist, initialState);
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const [modalState, setModalState] = useState<ModalState | null>(null);
+
     const heroContentRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (state.message) {
+            // Au lieu d'une alerte, on met à jour l'état du modal
+            setModalState({
+                isOpen: true,
+                title: state.success ? 'Success!' : 'Oops!',
+                message: state.message,
+                status: state.success ? 'success' : 'error',
+            });
+
+            if (state.success) {
+                formRef.current?.reset();
+            }
+        }
+    }, [state]);
 
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -114,80 +159,82 @@ export default function Hero() {
             );
     }, []);
 
-    const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        alert('Thanks for joining the waitlist!');
-    };
-
     return (
-        <section className="relative bg-orange-50/50 pt-24 pb-12 overflow-hidden">
-            <div
-                ref={heroContentRef}
-                className="max-w-4xl mx-auto px-4 text-center z-10"
-            >
-                <span className="launch-badge inline-flex items-center space-x-2 bg-white border border-gray-200 rounded-full px-3 py-1 text-sm font-medium text-yellow-800 mb-4">
-                    <RocketIcon />
-                    <span>Launching Soon</span>
-                </span>
-
-                <h1 className="main-headline text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                    Stop Applying, Start Getting Interviews
-                </h1>
-
-                <p className="sub-headline max-w-2xl mx-auto mt-6 text-lg text-gray-600">
-                    Be among the first to experience AI-powered resumes that are
-                    tailored to every job, beat ATS systems, and land you more
-                    interviews.
-                </p>
-
-                {/* --- FORMULAIRE MODIFIÉ --- */}
-                <form
-                    onSubmit={handleFormSubmit}
-                    // J'ai augmenté la largeur maximale du formulaire de 'max-w-md' à 'max-w-lg'
-                    className="waitlist-form mt-8 flex items-center gap-3 justify-center max-w-lg mx-auto"
+        <>
+            <section className="relative bg-orange-50/50 pt-24 pb-12 overflow-hidden">
+                <div
+                    ref={heroContentRef}
+                    className="max-w-4xl mx-auto px-4 text-center z-10"
                 >
-                    <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        required
-                        // 'flex-1' dit à l'input de prendre tout l'espace disponible
-                        className="flex-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition min-w-0"
-                    />
-                    <button
-                        type="submit"
-                        // 'flex-shrink-0' empêche le bouton de se rétrécir ou de passer à la ligne
-                        className="flex-shrink-0 bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-transform transform hover:scale-105"
-                    >
-                        Join Waitlist
-                    </button>
-                </form>
-
-                <div className="social-proof mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-                    <div className="flex items-center space-x-2">
-                        <UsersIcon />
-                        <span>2,847+ people waiting</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                        <NoSpamIcon />
-                        <span>No spam, ever</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                        <PerksIcon />
-                        <span>Early access perks</span>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                ref={imageRef}
-                className="relative max-w-5xl mx-auto mt-12 px-4"
-            >
-                <div className="relative h-[400px] md:h-[600px] lg:h-[800px] w-full bg-gray-200 border border-gray-300 rounded-xl shadow-2xl flex items-center justify-center">
-                    <span className="text-gray-400">
-                        Your App Screenshot Here
+                    <span className="launch-badge inline-flex items-center space-x-2 bg-white border border-gray-200 rounded-full px-3 py-1 text-sm font-medium text-yellow-800 mb-4">
+                        <RocketIcon />
+                        <span>Launching Soon</span>
                     </span>
+
+                    <h1 className="main-headline text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                        Stop Applying, Start Getting Interviews
+                    </h1>
+
+                    <p className="sub-headline max-w-2xl mx-auto mt-6 text-lg text-gray-600">
+                        Be among the first to experience AI-powered resumes that
+                        are tailored to every job, beat ATS systems, and land
+                        you more interviews.
+                    </p>
+
+                    {/* --- FORMULAIRE MODIFIÉ --- */}
+                    <form
+                        ref={formRef}
+                        action={formAction}
+                        // J'ai augmenté la largeur maximale du formulaire de 'max-w-md' à 'max-w-lg'
+                        className="waitlist-form mt-8 flex items-center gap-3 justify-center max-w-lg mx-auto"
+                    >
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                            // 'flex-1' dit à l'input de prendre tout l'espace disponible
+                            className="flex-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition min-w-0"
+                        />
+                        <SubmitButton />
+                    </form>
+
+                    <div className="social-proof mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-500">
+                        <div className="flex items-center space-x-2">
+                            <UsersIcon />
+                            <span>2,847+ people waiting</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <NoSpamIcon />
+                            <span>No spam, ever</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <PerksIcon />
+                            <span>Early access perks</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div
+                    ref={imageRef}
+                    className="relative max-w-5xl mx-auto mt-12 px-4"
+                >
+                    <div className="relative h-[400px] md:h-[600px] lg:h-[800px] w-full bg-gray-200 border border-gray-300 rounded-xl shadow-2xl flex items-center justify-center">
+                        <span className="text-gray-400">
+                            Your App Screenshot Here
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            {modalState?.isOpen && (
+                <StatusModal
+                    title={modalState.title}
+                    message={modalState.message}
+                    status={modalState.status}
+                    onClose={() => setModalState(null)} // La fonction pour fermer le modal
+                />
+            )}
+        </>
     );
 }
