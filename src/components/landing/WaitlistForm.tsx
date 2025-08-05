@@ -80,7 +80,7 @@ export default function WaitlistForm() {
             >
                 <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                        Don't Miss Out on the Future of Job Applications
+                        Don&apos;t Miss Out on the Future of Job Applications
                     </h2>
                     <p className="mt-4 text-lg text-orange-100">
                         Join 2,847+ professionals already on our waitlist
