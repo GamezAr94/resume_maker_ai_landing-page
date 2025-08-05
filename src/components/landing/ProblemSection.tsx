@@ -101,12 +101,12 @@ export default function ProblemSection() {
             <div className="max-w-5xl mx-auto px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="section-title text-3xl sm:text-4xl font-bold text-gray-900">
-                        The Old Way of Applying Doesn't Work Anymore
+                        The Old Way of Applying Doesn&apos;t Work Anymore
                     </h2>
                     <p className="section-subtitle mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         95% of resumes never reach human eyes. Generic resumes
                         get lost in ATS systems, and tailoring each one manually
-                        takes hours you don't have.
+                        takes hours you don&apos;t have.
                     </p>
                 </div>
 
@@ -140,7 +140,7 @@ export default function ProblemSection() {
                             Our AI strategically embeds the right keywordsfrom
                             the job offer and for that company to ensure your
                             resume passes the ATS scan and lands on the hiring
-                            manager's desk.
+                            manager&apos;s desk.
                         </p>
                     </div>
 
@@ -153,7 +153,7 @@ export default function ProblemSection() {
                             Get Noticed
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            A hyper-targeted resume for every role shows you're
+                            A hyper-targeted resume for every role shows you&apos;re
                             the perfect fit, dramatically increasing your
                             chances of getting the interview.
                         </p>
