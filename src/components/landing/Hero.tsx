@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { addToWaitlist, FormState } from '@/app/actions';
 import { useFormStatus } from 'react-dom';
 import StatusModal from '../common/StatusModal';
+import Image from 'next/image';
 
 // --- Icon components remain the same ---
 const RocketIcon = () => (
@@ -219,11 +220,14 @@ export default function Hero() {
                     ref={imageRef}
                     className="relative max-w-5xl mx-auto mt-12 px-4"
                 >
-                    <div className="relative h-[400px] md:h-[600px] lg:h-[800px] w-full bg-gray-200 border border-gray-300 rounded-xl shadow-2xl flex items-center justify-center">
-                        <span className="text-gray-400">
-                            Your App Screenshot Here
-                        </span>
-                    </div>
+                    <Image
+                        src="/Hero_banner.png"
+                        alt="Your App Screenshot"
+                        layout="responsive"
+                        width={800}
+                        height={600}
+                        className="rounded-xl shadow-2xl"
+                    />
                 </div>
             </section>
 
