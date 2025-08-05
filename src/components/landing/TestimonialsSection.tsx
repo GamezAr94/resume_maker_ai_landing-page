@@ -2,7 +2,7 @@
 
 // src/components/landing/TestimonialsSection.tsx
 
-import { useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -25,7 +25,7 @@ const TestimonialCard = ({ name, title, quote }: TestimonialCardProps) => (
                 </span>
             </div>
         </div>
-        <p className="text-gray-700 italic">"{quote}"</p>
+        <p className="text-gray-700 italic">&quot;{quote}&quot;</p>
         <div className="mt-4 font-bold text-gray-900">{name}</div>
         <div className="text-sm text-gray-500">{title}</div>
     </div>
