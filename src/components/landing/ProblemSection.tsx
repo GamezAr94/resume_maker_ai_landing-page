@@ -101,7 +101,7 @@ export default function ProblemSection() {
             <div className="max-w-5xl mx-auto px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="section-title text-3xl sm:text-4xl font-bold text-gray-900">
-                        The Job Market is Broken. We're Fixing It.
+                        The Old Way of Applying Doesn't Work Anymore
                     </h2>
                     <p className="section-subtitle mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         95% of resumes never reach human eyes. Generic resumes
@@ -118,11 +118,13 @@ export default function ProblemSection() {
                             <IconManualWork />
                         </div>
                         <h3 className="mt-6 text-xl font-bold text-gray-900">
-                            Hours of Manual Work
+                            Automate the Work
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Spending 2-3 hours customizing each resume for
-                            different jobs.
+                            Our AI does the tailoring in seconds. It analyzes
+                            the job and rebuilds a targeted resume from your
+                            master profile, showcasing the perfect achievements
+                            for that specific role and saving you hours.
                         </p>
                     </div>
 
@@ -132,11 +134,13 @@ export default function ProblemSection() {
                             <IconRejection />
                         </div>
                         <h3 className="mt-6 text-xl font-bold text-gray-900">
-                            ATS Rejection
+                            Beat the Bots
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            95% of resumes are filtered out before reaching
-                            hiring managers.
+                            Our AI strategically embeds the right keywordsfrom
+                            the job offer and for that company to ensure your
+                            resume passes the ATS scan and lands on the hiring
+                            manager's desk.
                         </p>
                     </div>
 
@@ -146,11 +150,12 @@ export default function ProblemSection() {
                             <IconLowResponse />
                         </div>
                         <h3 className="mt-6 text-xl font-bold text-gray-900">
-                            Low Response Rates
+                            Get Noticed
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Generic resumes result in less than 2% interview
-                            callback rates.
+                            A hyper-targeted resume for every role shows you're
+                            the perfect fit, dramatically increasing your
+                            chances of getting the interview.
                         </p>
                     </div>
                 </div>

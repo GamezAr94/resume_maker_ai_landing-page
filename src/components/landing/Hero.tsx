@@ -173,13 +173,14 @@ export default function Hero() {
                     </span>
 
                     <h1 className="main-headline text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                        Stop Applying, Start Getting Interviews
+                        Never Manually Tailor Your Resume Again
                     </h1>
 
                     <p className="sub-headline max-w-2xl mx-auto mt-6 text-lg text-gray-600">
-                        Be among the first to experience AI-powered resumes that
-                        are tailored to every job, beat ATS systems, and land
-                        you more interviews.
+                        Build your detailed career profile with us once. From
+                        then on, just paste a job description. Our AI will
+                        instantly craft a targeted resume for that specific job
+                        using the best information from your profile.
                     </p>
 
                     {/* --- FORMULAIRE MODIFIÉ --- */}
