@@ -204,7 +204,7 @@ export default function Hero() {
                     <div className="social-proof mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-500">
                         <div className="flex items-center space-x-2">
                             <UsersIcon />
-                            <span>2,847+ people waiting</span>
+                            <span>100% free to join</span>
                         </div>
                         <div className="flex items-center space-x-2">
                             <NoSpamIcon />

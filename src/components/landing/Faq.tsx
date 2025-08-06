@@ -10,23 +10,34 @@ gsap.registerPlugin(ScrollTrigger);
 const faqData = [
     {
         question: 'What is ResumeGenius AI?',
-        answer: "It's a smart resume builder that uses AI to create a tailored resume for every job you apply to. You build your master profile once, and our AI selects the most relevant information to highlight for each specific job description, saving you hours of work.",
+        answer: "It's an intelligent career platform designed to automate the most tedious parts of job hunting. You build a single, detailed 'master profile' with all your experience and skills. Our AI then uses that profile to instantly write a unique, targeted resume for any job description you provide.",
     },
     {
         question: 'How is this different from other resume builders?',
-        answer: 'While other builders offer templates, our AI does the strategic work for you. It analyzes job descriptions and customizes your resume content to match, ensuring you always present your best self for the role and pass through ATS filters.',
+        answer:
+            'The difference is our AI\'s "memory" and strategic thinking.\n\n' +
+            'Other resume builders are just fancy templates. Their AI might rephrase a sentence, but you still have to manually check every project and keyword.\n\n' +
+            'Generic AI (like ChatGPT) has no memory. You have to teach it who you are from scratch for every single application.',
     },
     {
         question: 'What are the benefits of joining the waitlist?',
-        answer: 'By joining, you get exclusive early access before the public launch, a special lifetime discount on our premium plans, and free credits to start generating resumes immediately.',
+        answer: "By joining, you become part of our founding community. You'll get exclusive early access and free resume credits to kickstart your job search. Plus, you'll receive updates on our launch and special offers.",
+    },
+    {
+        question: 'Is the waitlist free? Do I need a credit card?',
+        answer: 'Yes, the waitlist is 100% free, and no credit card is required. We believe in earning your trust, not tricking you into a subscription. You are simply signing up for launch notifications and exclusive perks.',
+    },
+    {
+        question: 'Can I import my data from LinkedIn?',
+        answer: 'Absolutely! We know that building a profile from scratch is time-consuming. You can kickstart your master profile by uploading the data file you can export from your LinkedIn account, saving you hours of setup time.',
     },
     {
         question: 'When will it launch and how much will it cost?',
-        answer: "We are planning to launch in the coming months. Final pricing isn't set, but waitlist members will receive a significant discount as a thank you for being an early supporter.",
+        answer: "We're working hard to launch in the coming months. Final pricing isn't set yet, but our promise is to be transparent and fair. Waitlist members will be the first to know and will receive the best offer as a thank you for their early support.",
     },
     {
         question: 'Can I cancel my waitlist signup?',
-        answer: 'Absolutely. There is no commitment. You can unsubscribe from our mailing list at any time with a single click.',
+        answer: 'Of course. There is zero commitment. You can unsubscribe from our mailing list at any time with a single click at the bottom of any email.',
     },
 ];
 

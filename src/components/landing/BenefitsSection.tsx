@@ -36,7 +36,21 @@ const IconPricing = () => (
         xmlns="http://www.w3.org/2000/svg"
     >
         <path
-            d="M12 8V12L14 14M21.65 11.35C21.65 16.75 16.75 21.65 11.35 21.65C5.95 21.65 1.05 16.75 1.05 11.35C1.05 5.95 5.95 1.05 11.35 1.05C13.43 1.05 15.33 1.68 16.88 2.88L19.13 0.63C19.52 0.24 20.15 0.24 20.54 0.63L22.67 2.76C23.06 3.15 23.06 3.78 22.67 4.17L20.42 6.42C21.18 7.91 21.65 9.58 21.65 11.35Z"
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M12 12H22"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
@@ -244,15 +258,15 @@ export default function BenefitsSection() {
                     />
                     <BenefitCard
                         icon={<IconPricing />}
-                        title="Special Pricing"
-                        description="50% off lifetime discount for early supporters."
+                        title="Land More Interviews"
+                        description="Get a competitive edge with resumes that are hyper-targeted to every single role, making you the obvious choice."
                         iconBgColor="bg-yellow-100"
                         iconTextColor="text-yellow-600"
                     />
                     <BenefitCard
                         icon={<IconCredits />}
                         title="Free Credits"
-                        description="Start with 5 free resume generations (worth $25)."
+                        description="Start free credits for AI resume generations to kickstart your job hunt on us."
                         iconBgColor="bg-red-100"
                         iconTextColor="text-red-600"
                     />
@@ -265,8 +279,8 @@ export default function BenefitsSection() {
                     />
                     <BenefitCard
                         icon={<IconSaveTime />}
-                        title="Save 10+ Hours"
-                        description="Per job application with automated tailoring."
+                        title="Save Hours, Not Minutes"
+                        description="Eliminate the tedious work of manual tailoring. Our AI saves you 10+ hours over the course of your job search."
                         iconBgColor="bg-blue-100"
                         iconTextColor="text-blue-600"
                     />

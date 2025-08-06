@@ -133,22 +133,22 @@ export default function HowItWorksSection() {
             <div ref={sectionRef} className="relative h-screen mt-16">
                 <Step
                     stepNumber="1"
-                    title="Build Your Master Profile"
-                    description="Add all your experience, education, projects, and skills just once. This becomes your personal career database."
+                    title="Build Your Master Profile ONCE"
+                    description="Quickly add your experience, education, and skills manually. Or to save hours of typing, kickstart your profile by importing the data export from your LinkedIn. This becomes your personal career database, ready for the AI."
                     imageSide="right"
                     className="step-1"
                 />
                 <Step
                     stepNumber="2"
                     title="Paste the Job Description"
-                    description="Our AI reads the job requirements to understand exactly what the hiring manager is looking for."
+                    description="From now on, you just have to paste in a job description, and our AI acts as your personal career strategist. It analyzes the role and the company, then digs through your profile to find the most compelling achievements and skills that make you the ideal candidate."
                     imageSide="left"
                     className="step-2"
                 />
                 <Step
                     stepNumber="3"
-                    title="Generate Your Perfect Resume"
-                    description="In one click, get a new resume built from the best parts of your profile, perfectly matched to the job."
+                    title="Generate Your Perfect Resume and Apply!"
+                    description="In one click, get a new resume built from the best parts of your profile, perfectly matched to the job. It's ready to go—just pick a template, give it a final review, and download. You have full editing power if you need it."
                     imageSide="right"
                     className="step-3"
                 />

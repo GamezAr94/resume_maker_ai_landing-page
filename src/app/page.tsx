@@ -1,6 +1,7 @@
 import BenefitsSection from '@/components/landing/BenefitsSection';
 import FaqSection from '@/components/landing/Faq';
 import Footer from '@/components/landing/Footer';
+import FounderStorySection from '@/components/landing/FounderStory';
 import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
 import HowItWorksSection from '@/components/landing/HowItWorksSection';
@@ -16,7 +17,8 @@ export default function Home() {
             <ProblemSection />
             <HowItWorksSection />
             <BenefitsSection />
-            <TestimonialsSection />
+            {/*<TestimonialsSection />*/}
+            <FounderStorySection />
             <FaqSection />
             <WaitlistForm />
             <Footer />
