@@ -8,6 +8,10 @@ import ProblemSection from '@/components/landing/ProblemSection';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
 import WaitlistForm from '@/components/landing/WaitlistForm';
 
+export default function Page() {
+    return <div>hola</div>;
+}
+/*
 export default function Home() {
     return (
         <main>
@@ -23,3 +27,4 @@ export default function Home() {
         </main>
     );
 }
+*/
