@@ -31,15 +31,13 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <span className="text-xl font-bold text-gray-800">
-                            ResumeGenius AI
+                            IntelliResume
                         </span>
                     </div>
-
                     <div className="flex items-center space-x-4">
                         <span className="hidden sm:block text-gray-500 text-sm">
                             Coming Soon
                         </span>
-
                         <button
                             onClick={scrollToWaitlist}
                             className="bg-orange-100 text-orange-700 font-semibold text-sm py-1.5 px-3 rounded-full hover:bg-orange-200 transition-colors duration-300"

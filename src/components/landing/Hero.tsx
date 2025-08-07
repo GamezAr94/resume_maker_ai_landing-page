@@ -223,7 +223,7 @@ export default function Hero() {
                 >
                     <Image
                         src="/Hero_banner.png"
-                        alt="Your App Screenshot"
+                        alt="Screenshot of the IntelliResume AI app showing a tailored resume being generated from a master profile."
                         layout="responsive"
                         width={800}
                         height={600}
