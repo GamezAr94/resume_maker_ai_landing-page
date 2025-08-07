@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 // TODO ART correctly set the site URL
-const siteUrl = 'https://www.intelliresume.com';
+const siteUrl = 'https://www.fazume.com';
 
 // We are creating detailed metadata for search engines.
 // The title is descriptive and keyword-rich.
@@ -92,8 +92,7 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                {/* TODO ART: Replace with your actual GA Measurement ID */}
-                <GoogleAnalytics measurementId="G-XXXXXXXXXX" />
+                <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
                 {children}
                 <Script
                     id="structured-data"
