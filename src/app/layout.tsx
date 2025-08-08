@@ -92,21 +92,25 @@ export default function RootLayout({
     };
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
-                <Header />
+            <head>
                 <Suspense fallback={null}>
                     <TermlyBanner websiteUUID="8cab5cd3-0553-46d1-b03f-eb64becf868d" autoBlock={true} />
                 </Suspense>
-                {children}
-                <Footer />
+                
+                {/* Structured Data Script */}
                 <Script
                     id="structured-data"
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
+            </head>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
+                <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
+                <Header />
+                {children}
+                <Footer />
             </body>
         </html>
     );
