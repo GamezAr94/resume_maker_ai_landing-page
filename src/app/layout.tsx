@@ -6,6 +6,7 @@ import Script from 'next/script';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import TermlyBanner from '@/components/TermlyBanner';
+import { Suspense } from 'react';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -17,7 +18,6 @@ const geistMono = Geist_Mono({
     subsets: ['latin'],
 });
 
-// TODO ART correctly set the site URL
 const siteUrl = 'https://www.fazume.com';
 
 // We are creating detailed metadata for search engines.
@@ -97,7 +97,9 @@ export default function RootLayout({
             >
                 <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
                 <Header />
-                <TermlyBanner websiteUUID="8cab5cd3-0553-46d1-b03f-eb64becf868d" />
+                <Suspense fallback={null}>
+                    <TermlyBanner websiteUUID="8cab5cd3-0553-46d1-b03f-eb64becf868d" />
+                </Suspense>
                 {children}
                 <Footer />
                 <Script
