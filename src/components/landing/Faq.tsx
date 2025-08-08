@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Les données pour notre FAQ. C'est bien de les séparer du code JSX.
 const faqData = [
     {
-        question: 'What is ResumeGenius AI?',
+        question: 'What is Fazume AI?',
         answer: "It's an intelligent career platform designed to automate the most tedious parts of job hunting. You build a single, detailed 'master profile' with all your experience and skills. Our AI then uses that profile to instantly write a unique, targeted resume for any job description you provide.",
     },
     {

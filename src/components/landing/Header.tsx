@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 export default function Header() {
     const headerRef = useRef<HTMLElement>(null);
@@ -30,9 +31,12 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <span className="text-xl font-bold text-gray-800">
-                            IntelliResume
-                        </span>
+                        <Link
+                            href="/"
+                            className="text-xl font-bold text-gray-800"
+                        >
+                            Fazume
+                        </Link>
                     </div>
                     <div className="flex items-center space-x-4">
                         <span className="hidden sm:block text-gray-500 text-sm">

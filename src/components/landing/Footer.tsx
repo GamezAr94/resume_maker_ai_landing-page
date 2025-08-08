@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,7 +36,7 @@ export default function Footer() {
                     {/* Colonne 1: Logo & Tagline */}
                     <div className="footer-col">
                         <h3 className="text-xl font-bold text-white">
-                            ResumeGenius AI
+                            FAZUME AI
                         </h3>
                         <p className="mt-2 max-w-sm">
                             AI-powered resumes for the modern job seeker.
@@ -63,7 +64,18 @@ export default function Footer() {
                                     href="mailto:hello@resumegeniusai.com"
                                     className="hover:text-white transition-colors"
                                 >
-                                    hello@resumegeniusai.com
+                                    hello@fazume.com
+                                </a>
+                            </li>
+                            <li>
+                                <Link href="/privacy">Privacy Policy</Link>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="termly-display-preferences"
+                                >
+                                    Consent Preferences
                                 </a>
                             </li>
                         </ul>
@@ -73,8 +85,8 @@ export default function Footer() {
                 {/* Ligne de séparation et copyright */}
                 <div className="copyright mt-12 border-t border-slate-800 pt-8 text-center text-sm">
                     <p>
-                        &copy; {new Date().getFullYear()} ResumeGenius AI. All
-                        rights reserved.
+                        &copy; {new Date().getFullYear()} Fazume AI. All rights
+                        reserved.
                     </p>
                 </div>
             </div>

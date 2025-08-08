@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import GoogleAnalytics from '@/components/common/GoogleAnalytics';
 import Script from 'next/script';
+import Header from '@/components/landing/Header';
+import Footer from '@/components/landing/Footer';
+import TermlyBanner from '@/components/TermlyBanner';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -93,7 +96,10 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
+                <Header />
                 {children}
+                <TermlyBanner />
+                <Footer />
                 <Script
                     id="structured-data"
                     type="application/ld+json"
