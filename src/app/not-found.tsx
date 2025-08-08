@@ -1,14 +1,9 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
-import Header from '@/components/landing/Header';
-import Footer from '@/components/landing/Footer';
 
 export default function NotFound() {
     return (
         <>
-            <Suspense>
-                <Header />
-            </Suspense>
             <main className="flex flex-col items-center justify-center text-center bg-gray-50 py-20 sm:py-40">
                 <h1 className="text-6xl font-bold text-orange-500">404</h1>
                 <h2 className="mt-4 text-3xl font-bold text-gray-900">
@@ -24,9 +19,6 @@ export default function NotFound() {
                     Go Back Home
                 </Link>
             </main>
-            <Suspense>
-                <Footer />
-            </Suspense>
         </>
     );
 }
