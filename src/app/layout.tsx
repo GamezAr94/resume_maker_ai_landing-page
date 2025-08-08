@@ -98,7 +98,7 @@ export default function RootLayout({
                 <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
                 <Header />
                 <Suspense fallback={null}>
-                    <TermlyBanner websiteUUID="8cab5cd3-0553-46d1-b03f-eb64becf868d" />
+                    <TermlyBanner websiteUUID="8cab5cd3-0553-46d1-b03f-eb64becf868d" autoBlock={true} />
                 </Suspense>
                 {children}
                 <Footer />
