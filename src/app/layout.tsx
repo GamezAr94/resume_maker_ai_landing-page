@@ -73,7 +73,7 @@ export default function RootLayout({
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'IntelliResume',
+        name: 'Fazume AI',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description:
