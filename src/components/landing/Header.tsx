@@ -2,12 +2,18 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'; // NEW: Import the ScrollToPlugin
 import Link from 'next/link';
+import React from 'react';
+
+// NEW: Register the plugin with GSAP
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Header() {
     const headerRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
+        // GSAP animation for the header on initial load
         gsap.from(headerRef.current, {
             duration: 1,
             yPercent: -100,
@@ -16,10 +22,22 @@ export default function Header() {
         });
     }, []);
 
-    const scrollToWaitlist = () => {
-        const waitlistSection = document.getElementById('waitlist-form');
-        if (waitlistSection) {
-            waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    // NEW: Function to handle smooth scrolling
+    const handleScroll = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    ) => {
+        e.preventDefault(); // Prevent the default instant jump
+        const href = e.currentTarget.getAttribute('href');
+        if (href) {
+            // Use GSAP to scroll smoothly to the target section
+            gsap.to(window, {
+                duration: 1.2, // Animation duration in seconds
+                scrollTo: {
+                    y: href,
+                    offsetY: 80, // Offset to account for the fixed header's height
+                },
+                ease: 'power2.inOut', // Easing function for a nice effect
+            });
         }
     };
 
@@ -38,16 +56,48 @@ export default function Header() {
                             Fazume
                         </Link>
                     </div>
-                    <div className="flex items-center space-x-4">
-                        <span className="hidden sm:block text-gray-500 text-sm">
-                            Coming Soon
-                        </span>
-                        <button
-                            onClick={scrollToWaitlist}
-                            className="bg-orange-100 text-orange-700 font-semibold text-sm py-1.5 px-3 rounded-full hover:bg-orange-200 transition-colors duration-300"
+
+                    {/* NEW: Navigation links for desktop view */}
+                    <nav className="hidden md:flex items-center space-x-8">
+                        <a
+                            href="#how-it-works"
+                            onClick={handleScroll}
+                            className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors"
                         >
-                            Join Waitlist
-                        </button>
+                            How It Works
+                        </a>
+                        <a
+                            href="#features"
+                            onClick={handleScroll}
+                            className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors"
+                        >
+                            Features
+                        </a>
+                        <a
+                            href="#about"
+                            onClick={handleScroll}
+                            className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors"
+                        >
+                            About
+                        </a>
+                        <a
+                            href="#faq"
+                            onClick={handleScroll}
+                            className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors"
+                        >
+                            FAQ
+                        </a>
+                    </nav>
+
+                    <div className="flex items-center">
+                        {/* The "Get Started" button remains the same */}
+                        <a
+                            href="https://app.fazume.com"
+                            rel="noopener noreferrer"
+                            className="bg-orange-500 text-white font-semibold text-sm py-1.5 px-4 rounded-full hover:bg-orange-600 transition-colors duration-300 shadow-sm"
+                        >
+                            Get Started
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,11 @@
 'use client';
 
-// src/components/landing/BenefitsSection.tsx
-
 import { useEffect, useRef, ReactNode } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// --- Les composants pour les icônes restent les mêmes ---
 const IconEarlyAccess = () => (
     <svg
         width="24"
@@ -26,7 +23,6 @@ const IconEarlyAccess = () => (
         />
     </svg>
 );
-// ... (les autres icônes ici, pas besoin de les répéter)
 const IconPricing = () => (
     <svg
         width="24"
@@ -198,7 +194,6 @@ const BenefitCard = ({
     iconBgColor,
     iconTextColor,
 }: BenefitCardProps) => (
-    // **CHANGEMENT ICI**: On ajoute la classe "invisible" pour cacher la carte avant l'animation.
     <div className="benefit-card invisible bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
         <div
             className={`w-12 h-12 rounded-lg flex items-center justify-center ${iconBgColor} ${iconTextColor}`}
@@ -216,16 +211,13 @@ export default function BenefitsSection() {
     useEffect(() => {
         const element = sectionRef.current;
         if (!element) return;
-
-        // **CHANGEMENT ICI**: On utilise gsap.to() et la propriété 'autoAlpha'.
-        // 'autoAlpha' est comme 'opacity', mais il gère aussi la propriété 'visibility' pour de meilleures performances.
-        // On anime DE l'état invisible (défini dans le HTML) VERS l'état visible (autoAlpha: 1).
+        // Animation logic remains the same, it's perfect.
         gsap.to(element.querySelectorAll('.benefit-card'), {
             scrollTrigger: {
                 trigger: element,
-                start: 'top 80%', // On peut ajuster ce '80%' si besoin
+                start: 'top 80%',
             },
-            autoAlpha: 1, // Rend les éléments visibles
+            autoAlpha: 1,
             y: 0,
             scale: 1,
             duration: 0.7,
@@ -239,23 +231,22 @@ export default function BenefitsSection() {
             <div className="max-w-6xl mx-auto px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                        Why Join the Waitlist?
+                        A Smarter Way to Build Your Resume
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Be among the first to experience the future of job
-                        applications.
+                        From tedious task to career triumph. Here's how
+                        ResumeGenius AI transforms your job hunt.
                     </p>
                 </div>
-
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Les BenefitCard sont les mêmes qu'avant */}
                     <BenefitCard
                         icon={<IconEarlyAccess />}
-                        title="Early Access"
-                        description="Be the first to use ResumeGenius AI before public launch."
+                        title="AI-Powered Precision"
+                        description="Our AI analyzes job descriptions to tailor every line of your resume for maximum impact, not just fill templates."
                         iconBgColor="bg-green-100"
                         iconTextColor="text-green-600"
                     />
+                    {/* This card is a strong core benefit, no changes needed. */}
                     <BenefitCard
                         icon={<IconPricing />}
                         title="Land More Interviews"
@@ -265,15 +256,16 @@ export default function BenefitsSection() {
                     />
                     <BenefitCard
                         icon={<IconCredits />}
-                        title="Free Credits"
-                        description="Start free credits for AI resume generations to kickstart your job hunt on us."
+                        title="Start for Free"
+                        description="Get started with 15 free credits and see the results for yourself. No commitment required."
                         iconBgColor="bg-red-100"
                         iconTextColor="text-red-600"
                     />
+                    {/* The rest of these cards are perfect core benefits, no changes needed. */}
                     <BenefitCard
                         icon={<IconSuccess />}
                         title="Higher Success Rate"
-                        description="3x more interviews with AI-optimized resumes."
+                        description="Boost your interview chances with AI-optimized resumes that stand out to recruiters and hiring managers."
                         iconBgColor="bg-orange-100"
                         iconTextColor="text-orange-600"
                     />
@@ -287,7 +279,7 @@ export default function BenefitsSection() {
                     <BenefitCard
                         icon={<IconATS />}
                         title="ATS Guaranteed"
-                        description="100% ATS-compatible formatting and keywords."
+                        description="Craft resumes with 100% ATS-compatible formatting and keywords to ensure you pass the initial screening."
                         iconBgColor="bg-pink-100"
                         iconTextColor="text-pink-600"
                     />

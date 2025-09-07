@@ -3,6 +3,10 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import build_profile_image from '../../../public/build_profile.png';
+import job_details_image from '../../../public/job_details.png';
+import resume_view_image from '../../../public/resume_view.png';
+import Image from 'next/image';
 
 // Register the GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -134,13 +138,18 @@ export default function HowItWorksTimeline() {
                         <StepCard
                             stepNumber="1"
                             title="Build Your Master Profile"
-                            description="Quickly add your experience, education, and skills. To save hours of typing, kickstart your profile by importing the data export from your LinkedIn. This becomes your personal career database, ready for the AI."
+                            description="Manually add your experience, education, and skills in this one-time step. Think of it as creating your personal career database. The richer the detail and achievements you include, the more powerful our AI becomes at generating a resume that truly stands out."
                             imageSide="right"
                         >
-                            <div className="h-80 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
-                                <span className="text-gray-400">
-                                    Illustrative Image 1
-                                </span>
+                            <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
+                                <Image
+                                    src={build_profile_image}
+                                    alt="Image showing how to complete the master profile"
+                                    width={2400} // Increased intrinsic width
+                                    height={1600} // Increased intrinsic height
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority
+                                />
                             </div>
                         </StepCard>
 
@@ -150,10 +159,15 @@ export default function HowItWorksTimeline() {
                             description="Just paste in a job description, and our AI acts as your personal career strategist. It analyzes the role and the company, then digs through your profile to find the most compelling achievements and skills that make you the ideal candidate."
                             imageSide="left"
                         >
-                            <div className="h-80 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
-                                <span className="text-gray-400">
-                                    Illustrative Image 2
-                                </span>
+                            <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
+                                <Image
+                                    src={job_details_image}
+                                    alt="Image showing how to paste the job details to the Resume generator AI tool"
+                                    width={2400} // Increased intrinsic width
+                                    height={1600} // Increased intrinsic height
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority
+                                />
                             </div>
                         </StepCard>
 
@@ -163,10 +177,15 @@ export default function HowItWorksTimeline() {
                             description="In one click, get a new resume built from the best parts of your profile, perfectly matched to the job. It's ready to go—just pick a template, give it a final review, and download. You have full editing power if you need it."
                             imageSide="right"
                         >
-                            <div className="h-80 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
-                                <span className="text-gray-400">
-                                    Illustrative Image 3
-                                </span>
+                            <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
+                                <Image
+                                    src={resume_view_image}
+                                    alt="Image showing how to paste the job details to the Resume generator AI tool"
+                                    width={2400} // Increased intrinsic width
+                                    height={1600} // Increased intrinsic height
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority
+                                />
                             </div>
                         </StepCard>
                     </div>

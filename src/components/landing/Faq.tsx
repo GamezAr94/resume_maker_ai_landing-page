@@ -16,28 +16,23 @@ const faqData = [
         question: 'How is this different from other resume builders?',
         answer:
             'The difference is our AI\'s "memory" and strategic thinking.\n\n' +
-            'Other resume builders are just fancy templates. Their AI might rephrase a sentence, but you still have to manually check every project and keyword.\n\n' +
-            'Generic AI (like ChatGPT) has no memory. You have to teach it who you are from scratch for every single application.',
+            'Other resume builders are just fancy templates. Generic AI (like ChatGPT) has no memory. You have to teach it who you are from scratch for every single application. Fazume learns from your master profile to act as your personal career expert.',
     },
     {
-        question: 'What are the benefits of joining the waitlist?',
-        answer: "By joining, you become part of our founding community. You'll get exclusive early access and free resume credits to kickstart your job search. Plus, you'll receive updates on our launch and special offers.",
+        question: 'How does the "15 free resumes" offer work?',
+        answer: "Simple! When you create a free account, you get 15 resume credits added instantly. You can use these to generate fifteen complete, AI-tailored resumes to try out the full power of the platform. No credit card required, and the credits don't expire.",
     },
     {
-        question: 'Is the waitlist free? Do I need a credit card?',
-        answer: 'Yes, the waitlist is 100% free, and no credit card is required. We believe in earning your trust, not tricking you into a subscription. You are simply signing up for launch notifications and exclusive perks.',
+        question: 'How much does Fazume cost after I use my free credits?',
+        answer: "After you've used your free credits, you can upgrade to a paid plan to generate more resumes and unlock advanced features. We offer simple, affordable subscription options. You can view the full details on our pricing page once you're logged in.",
     },
     {
         question: 'Can I import my data from LinkedIn?',
-        answer: 'Absolutely! We know that building a profile from scratch is time-consuming. You can kickstart your master profile by uploading the data file you can export from your LinkedIn account, saving you hours of setup time.',
+        answer: 'Not yet, but a direct LinkedIn import feature is in active development! For now, building your master profile is a manual process. The powerful part is that you only have to do it once. That single, detailed profile becomes the permanent "brain" for our AI, enabling you to generate hundreds of perfectly tailored resumes in the future without ever manually entering your work history again.',
     },
     {
-        question: 'When will it launch and how much will it cost?',
-        answer: "We're working hard to launch in the coming months. Final pricing isn't set yet, but our promise is to be transparent and fair. Waitlist members will be the first to know and will receive the best offer as a thank you for their early support.",
-    },
-    {
-        question: 'Can I cancel my waitlist signup?',
-        answer: 'Of course. There is zero commitment. You can unsubscribe from our mailing list at any time with a single click at the bottom of any email.',
+        question: 'Is my data secure?',
+        answer: 'Yes, we take your data security and privacy very seriously. All information is encrypted, and we will never share your personal career data with third parties. Your profile is for your eyes only.',
     },
 ];
 

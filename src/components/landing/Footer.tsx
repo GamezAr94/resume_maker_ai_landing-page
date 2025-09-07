@@ -43,16 +43,24 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Colonne 2: Liens "Coming Soon" */}
+                    {/* Column 2: Call to Action */}
                     <div className="footer-col">
                         <h4 className="font-semibold text-white">
-                            Coming Soon
+                            Ready to Upgrade Your Career?
                         </h4>
-                        <ul className="mt-4 space-y-2">
-                            <li>Early 2026 Launch</li>
-                            <li>AI-Powered Resume Builder</li>
-                            <li>ATS Optimization</li>
-                        </ul>
+                        <p className="mt-2">
+                            Create an account and get your 15 free resumes.
+                        </p>
+                        <div className="mt-4">
+                            <a
+                                href="https://app.fazume.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-orange-500 text-white font-semibold py-2 px-5 rounded-lg hover:bg-orange-600 transition-colors shadow-md"
+                            >
+                                Go to App
+                            </a>
+                        </div>
                     </div>
 
                     {/* Colonne 3: Contact */}

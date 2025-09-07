@@ -1,11 +1,8 @@
 'use client';
 // src/components/landing/Hero.tsx
 
-import { useActionState, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { addToWaitlist, FormState } from '@/app/actions';
-import { useFormStatus } from 'react-dom';
-import StatusModal from '../common/StatusModal';
 import Image from 'next/image';
 
 // --- Icon components remain the same ---
@@ -27,108 +24,10 @@ const RocketIcon = () => (
         ></path>
     </svg>
 );
-function SubmitButton() {
-    const { pending } = useFormStatus(); // Ce hook nous dit si le formulaire est en cours d'envoi.
-
-    return (
-        <button
-            type="submit"
-            disabled={pending} // Le bouton est désactivé pendant l'envoi
-            className="flex-shrink-0 bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105 disabled:bg-orange-300 disabled:cursor-not-allowed"
-        >
-            {pending ? 'Joining...' : 'Join Waitlist'}
-        </button>
-    );
-}
-const UsersIcon = () => (
-    <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M17 20C17 18.3431 14.7614 17 12 17C9.23858 17 7 18.3431 7 20M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        ></path>
-    </svg>
-);
-const NoSpamIcon = () => (
-    <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-            stroke="currentColor"
-            strokeWidth="2"
-        ></path>
-        <path
-            d="M8.5 8.5L15.5 15.5"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        ></path>
-    </svg>
-);
-const PerksIcon = () => (
-    <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path
-            d="M12 6L13.9221 9.83299L18 10.4393L15 13.318L15.6942 17.3607L12 15.34L8.30584 17.3607L9 13.318L6 10.4393L10.0779 9.83299L12 6Z"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        ></path>
-    </svg>
-);
-
-interface ModalState {
-    isOpen: boolean;
-    title: string;
-    message: string;
-    status: 'success' | 'error';
-}
 
 export default function Hero() {
-    const initialState: FormState = { message: '', success: false };
-    const [state, formAction] = useActionState(addToWaitlist, initialState);
-    const formRef = useRef<HTMLFormElement>(null);
-
-    const [modalState, setModalState] = useState<ModalState | null>(null);
-
     const heroContentRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (state.message) {
-            // Au lieu d'une alerte, on met à jour l'état du modal
-            setModalState({
-                isOpen: true,
-                title: state.success ? 'Success!' : 'Oops!',
-                message: state.message,
-                status: state.success ? 'success' : 'error',
-            });
-
-            if (state.success) {
-                formRef.current?.reset();
-            }
-        }
-    }, [state]);
 
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -167,9 +66,9 @@ export default function Hero() {
                     ref={heroContentRef}
                     className="max-w-4xl mx-auto px-4 text-center z-10"
                 >
-                    <span className="launch-badge inline-flex items-center space-x-2 bg-white border border-gray-200 rounded-full px-3 py-1 text-sm font-medium text-yellow-800 mb-4">
+                    <span className="launch-badge inline-flex items-center space-x-2 bg-white border border-gray-200 rounded-full px-3 py-1 text-sm font-medium text-green-800 mb-4">
                         <RocketIcon />
-                        <span>Launching Soon</span>
+                        <span>Free to Get Started</span>
                     </span>
 
                     <h1 className="main-headline text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
@@ -182,38 +81,34 @@ export default function Hero() {
                         instantly craft a targeted resume for that specific job
                         using the best information from your profile.
                     </p>
+                    <p className="mt-6 text-md font-semibold text-orange-600 animate-pulse">
+                        <svg
+                            className="inline-block w-4 h-4 mr-1 -mt-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                            ></path>
+                        </svg>
+                        Limited Time Offer: Get <strong>15 free resumes</strong>{' '}
+                        when you sign up!
+                    </p>
 
-                    {/* --- FORMULAIRE MODIFIÉ --- */}
-                    <form
-                        ref={formRef}
-                        action={formAction}
-                        // J'ai augmenté la largeur maximale du formulaire de 'max-w-md' à 'max-w-lg'
-                        className="waitlist-form mt-8 flex items-center gap-3 justify-center max-w-lg mx-auto"
-                    >
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Enter your email address"
-                            required
-                            // 'flex-1' dit à l'input de prendre tout l'espace disponible
-                            className="flex-1 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition min-w-0"
-                        />
-                        <SubmitButton />
-                    </form>
-
-                    <div className="social-proof mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-                        <div className="flex items-center space-x-2">
-                            <UsersIcon />
-                            <span>100% free to join</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <NoSpamIcon />
-                            <span>No spam, ever</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <PerksIcon />
-                            <span>Early access perks</span>
-                        </div>
+                    <div className="mt-10">
+                        <a
+                            href="https://app.fazume.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-button inline-block bg-orange-500 text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg"
+                        >
+                            Get Started for Free
+                        </a>
                     </div>
                 </div>
 
@@ -222,7 +117,7 @@ export default function Hero() {
                     className="relative max-w-5xl mx-auto mt-12 px-4"
                 >
                     <Image
-                        src="/Hero_banner.png"
+                        src="/hero_image.png"
                         alt="Screenshot of the IntelliResume AI app showing a tailored resume being generated from a master profile."
                         layout="responsive"
                         width={800}
@@ -231,15 +126,6 @@ export default function Hero() {
                     />
                 </div>
             </section>
-
-            {modalState?.isOpen && (
-                <StatusModal
-                    title={modalState.title}
-                    message={modalState.message}
-                    status={modalState.status}
-                    onClose={() => setModalState(null)} // La fonction pour fermer le modal
-                />
-            )}
         </>
     );
 }
