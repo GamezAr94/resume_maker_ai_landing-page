@@ -120,7 +120,7 @@ export default function HowItWorksTimeline() {
                         ref={titleRef}
                         className="text-3xl sm:text-4xl font-bold text-gray-900"
                     >
-                        Create a Job-Winning Resume in 3 Easy Steps
+                        Your Career Co-Pilot in 4 Steps
                     </h2>
                 </div>
 
@@ -143,7 +143,7 @@ export default function HowItWorksTimeline() {
                         >
                             <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
                                 <Image
-                                    src={build_profile_image}
+                                    src="/build_profile.png"
                                     alt="Image showing how to complete the master profile"
                                     width={2400} // Increased intrinsic width
                                     height={1600} // Increased intrinsic height
@@ -161,7 +161,7 @@ export default function HowItWorksTimeline() {
                         >
                             <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
                                 <Image
-                                    src={job_details_image}
+                                    src="/job_details.png"
                                     alt="Image showing how to paste the job details to the Resume generator AI tool"
                                     width={2400} // Increased intrinsic width
                                     height={1600} // Increased intrinsic height
@@ -179,12 +179,27 @@ export default function HowItWorksTimeline() {
                         >
                             <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
                                 <Image
-                                    src={resume_view_image}
+                                    src="/resume_view.png"
                                     alt="Image showing how to paste the job details to the Resume generator AI tool"
                                     width={2400} // Increased intrinsic width
                                     height={1600} // Increased intrinsic height
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     priority
+                                />
+                            </div>
+                        </StepCard>
+                        <StepCard
+                            stepNumber="4"
+                            title="Improve with AI Feedback"
+                            description="Your resume is just the start. Get actionable recommendations on how to strengthen your master profile and gain insights with a rationale explaining every AI choice, turning each application into a learning opportunity."
+                            imageSide="left"
+                        >
+                            <div className="min-h-[300px] md:min-h-[500px] lg:min-h-[600px] bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center">
+                                <Image
+                                    src="/feedback_image.png"
+                                    alt="A screenshot showing the AI feedback and recommendations tab in the Fazume app."
+                                    width={2400}
+                                    height={1600}
                                 />
                             </div>
                         </StepCard>
