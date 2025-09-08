@@ -234,7 +234,7 @@ export default function BenefitsSection() {
                         A Smarter Way to Build Your Resume
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                        From tedious task to career triumph. Here's how
+                        From tedious task to career triumph. Here&apos;s how
                         ResumeGenius AI transforms your job hunt.
                     </p>
                 </div>

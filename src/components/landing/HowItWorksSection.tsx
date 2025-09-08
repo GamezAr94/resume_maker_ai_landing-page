@@ -3,9 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import build_profile_image from '../../../public/build_profile.png';
-import job_details_image from '../../../public/job_details.png';
-import resume_view_image from '../../../public/resume_view.png';
 import Image from 'next/image';
 
 // Register the GSAP ScrollTrigger plugin
