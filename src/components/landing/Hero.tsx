@@ -102,8 +102,7 @@ export default function Hero() {
 
                     <div className="mt-10">
                         <a
-                            href="https://app.fazume.com"
-                            target="_blank"
+                            href="https://app.fazume.com/sign-up"
                             rel="noopener noreferrer"
                             className="cta-button inline-block bg-orange-500 text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg"
                         >

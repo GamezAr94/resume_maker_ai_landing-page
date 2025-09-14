@@ -3,6 +3,7 @@ import FaqSection from '@/components/landing/Faq';
 import FounderStorySection from '@/components/landing/FounderStory';
 import Hero from '@/components/landing/Hero';
 import HowItWorksSection from '@/components/landing/HowItWorksSection';
+import PricingSection from '@/components/landing/Prices';
 import ProblemSection from '@/components/landing/ProblemSection';
 //import TestimonialsSection from '@/components/landing/TestimonialsSection';
 //import WaitlistForm from '@/components/landing/WaitlistForm';
@@ -25,6 +26,10 @@ export default function Home() {
             {/* The founder story can be "About" */}
             <div id="about">
                 <FounderStorySection />
+            </div>
+
+            <div id="pricing">
+                <PricingSection />
             </div>
 
             {/* And finally, the FAQ section */}

@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'; // NEW: Import the ScrollToPlugin
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 
 // NEW: Register the plugin with GSAP
 gsap.registerPlugin(ScrollToPlugin);
@@ -51,8 +52,14 @@ export default function Header() {
                     <div className="flex-shrink-0">
                         <Link
                             href="/"
-                            className="text-xl font-bold text-gray-800"
+                            className="text-xl font-bold text-gray-800 flex flex-row gap-4 items-center"
                         >
+                            <Image
+                                src={'/logo_dark.svg'}
+                                alt={'Official Logo of the Fazume website'}
+                                width={20}
+                                height={30}
+                            />
                             Fazume
                         </Link>
                     </div>
@@ -73,6 +80,15 @@ export default function Header() {
                         >
                             Features
                         </a>
+
+                        <a
+                            href="#pricing"
+                            onClick={handleScroll}
+                            className="text-sm font-medium text-gray-600 hover:text-orange-500 transition-colors"
+                        >
+                            Pricing
+                        </a>
+
                         <a
                             href="#about"
                             onClick={handleScroll}

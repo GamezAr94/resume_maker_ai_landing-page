@@ -20,7 +20,6 @@ const geistMono = Geist_Mono({
 
 const siteUrl = 'https://www.fazume.com';
 
-// --- UPDATED METADATA ---
 export const metadata: Metadata = {
     title: 'Fazume | AI Resume Builder for Career Changers & Professionals',
     description:
