@@ -21,7 +21,11 @@ const geistMono = Geist_Mono({
 const siteUrl = 'https://www.fazume.com';
 
 export const metadata: Metadata = {
-    title: 'Fazume | AI Resume Builder for Career Changers & Professionals',
+    title: {
+        template: '%s | Fazume',
+        default:
+            'Fazume | AI Resume Builder for Career Changers & Professionals',
+    },
     description:
         'Stop wasting hours tailoring your resume. Fazume analyzes your entire career history against any job description to generate a perfectly optimized, job-specific resume in seconds. Ideal for career changers and professionals with a lot of experience, projects or studies.',
     keywords:
