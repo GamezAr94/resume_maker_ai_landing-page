@@ -19,8 +19,8 @@ const faqData = [
             'Other resume builders are just fancy templates. Generic AI (like ChatGPT) has no memory. You have to teach it who you are from scratch for every single application. Fazume learns from your master profile to act as your personal career expert.',
     },
     {
-        question: 'How does the "15 free resumes" offer work?',
-        answer: "Simple! When you create a free account, you get 15 resume credits added instantly. You can use these to generate fifteen complete, AI-tailored resumes to try out the full power of the platform. No credit card required, and the credits don't expire.",
+        question: 'How does the "7 free resumes" offer work?',
+        answer: "Simple! When you create a free account, you get 7 resume credits added instantly. You can use these to generate fifteen complete, AI-tailored resumes to try out the full power of the platform. No credit card required, and the credits don't expire.",
     },
     {
         question: 'How much does Fazume cost after I use my free credits?',

@@ -257,7 +257,7 @@ export default function BenefitsSection() {
                     <BenefitCard
                         icon={<IconCredits />}
                         title="Start for Free"
-                        description="Get started with 15 free credits and see the results for yourself. No commitment required."
+                        description="Get started with 7 free credits and see the results for yourself. No commitment required."
                         iconBgColor="bg-red-100"
                         iconTextColor="text-red-600"
                     />

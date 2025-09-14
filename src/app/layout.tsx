@@ -20,16 +20,13 @@ const geistMono = Geist_Mono({
 
 const siteUrl = 'https://www.fazume.com';
 
-// We are creating detailed metadata for search engines.
-// The title is descriptive and keyword-rich.
-// The description clearly explains the value proposition.
+// --- UPDATED METADATA ---
 export const metadata: Metadata = {
-    title: 'IntelliResume | AI Resume Builder to Automate Your Job Hunt',
+    title: 'Fazume | AI Resume Builder for Career Changers & Professionals',
     description:
-        'Stop manually tailoring resumes. IntelliResume uses AI to build a master profile and create a unique, targeted resume for every job application. Save time and land more interviews.',
-    // You can also add keywords, although they are less important for Google now
+        'Stop wasting hours tailoring your resume. Fazume analyzes your entire career history against any job description to generate a perfectly optimized, job-specific resume in seconds. Ideal for career changers and professionals with a lot of experience, projects or studies.',
     keywords:
-        'AI resume builder, resume tailoring, automated resume, job application, ATS resume, career tool',
+        'AI resume builder, resume tailor, automated resume, career change resume, professional resume, job-specific resume, ATS resume, resume optimization',
     metadataBase: new URL(siteUrl),
     alternates: {
         canonical: '/',
@@ -37,30 +34,26 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         url: siteUrl,
-        title: 'IntelliResume | AI Resume Builder',
+        title: 'Fazume: Job-Specific Resumes in Seconds',
         description:
-            'Stop manually tailoring resumes. Let our AI build a unique, targeted resume for every job.',
-        // You should create a specific social sharing image (e.g., 1200x630px)
+            'Fazume analyzes your full career profile against a job offer to create the perfect resume, every time.',
+        // IMPORTANT: Remember to create this social sharing image (1200x630px)
         // and place it in your `public` folder.
         images: [
             {
-                // TODO ART: Update this URL to your actual social sharing image
                 url: '/social-sharing-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'IntelliResume AI Resume Builder Banner',
+                alt: 'Fazume AI Resume Builder Banner',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'IntelliResume | AI Resume Builder',
+        title: 'Fazume: Job-Specific Resumes in Seconds',
         description:
-            'Stop manually tailoring resumes. Let our AI build a unique, targeted resume for every job.',
-        // TODO ART: Add your Twitter handle if you have one
+            'Fazume analyzes your full career profile against a job offer to create the perfect resume, every time.',
         images: ['/social-sharing-image.png'],
-        // Add your Twitter handle if you have one
-        // creator: '@yourTwitterHandle',
     },
 };
 
@@ -69,27 +62,22 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    // TODO Learn how to add structured data for better SEO
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Fazume AI',
+        name: 'Fazume',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web',
         description:
-            'An AI-powered resume builder that automates resume tailoring for job applications.',
+            "An AI-powered resume builder that intelligently analyzes a user's entire professional history and a target job description to generate a perfectly tailored, job-specific resume.",
         offers: {
             '@type': 'Offer',
-            price: '0', // Since there's a free waitlist
+            price: '0', // Represents the free sign-up
             priceCurrency: 'USD',
         },
-        // Add your aggregate rating here once you have real reviews
-        // aggregateRating: {
-        //   '@type': 'AggregateRating',
-        //   ratingValue: '4.9',
-        //   ratingCount: '88'
-        // },
+        // You can add aggregateRating here once you have reviews.
     };
+
     return (
         <html lang="en">
             <body

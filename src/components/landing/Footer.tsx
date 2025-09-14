@@ -49,7 +49,7 @@ export default function Footer() {
                             Ready to Upgrade Your Career?
                         </h4>
                         <p className="mt-2">
-                            Create an account and get your 15 free resumes.
+                            Create an account and get your 7 free resumes.
                         </p>
                         <div className="mt-4">
                             <a
