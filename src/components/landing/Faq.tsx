@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const faqData = [
     {
         question: 'What is Fazume AI?',
-        answer: "It's an intelligent career platform designed to automate the most tedious parts of job hunting. You build a single, detailed 'master profile' with all your experience and skills. Our AI then uses that profile to instantly write a unique, targeted resume for any job description you provide.",
+        answer: 'Fazume is an AI resume builder that saves you time and improves your application quality. You create one "master profile" of your career, and our AI uses it to instantly generate a perfectly tailored, ATS-optimized resume for any job description you provide.',
     },
     {
         question: 'How is this different from other resume builders?',
