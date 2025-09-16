@@ -68,7 +68,7 @@ export default function Hero() {
                 >
                     <span className="launch-badge inline-flex items-center space-x-2 bg-white border border-gray-200 rounded-full px-3 py-1 text-sm font-medium text-green-800 mb-4">
                         <RocketIcon />
-                        <span>Free to Get Started</span>
+                        <span>Join the Private Beta</span>
                     </span>
 
                     <h1 className="main-headline text-4xl md:text-6xl font-bold text-gray-900 leading-tight">

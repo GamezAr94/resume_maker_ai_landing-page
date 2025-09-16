@@ -23,11 +23,10 @@ const siteUrl = 'https://www.fazume.com';
 export const metadata: Metadata = {
     title: {
         template: '%s | Fazume',
-        default:
-            'Fazume | AI Resume Builder for Career Changers & Professionals',
+        default: 'Fazume: AI Resume Builder for Tailored Resumes in Seconds',
     },
     description:
-        'Stop wasting hours tailoring your resume. Fazume analyzes your entire career history against any job description to generate a perfectly optimized, job-specific resume in seconds. Ideal for career changers and professionals with a lot of experience, projects or studies.',
+        "Land your next role faster. Fazume's AI analyzes job descriptions to build a perfectly tailored resume from your career profile. Try the AI resume builder.",
     keywords:
         'AI resume builder, resume tailor, automated resume, career change resume, professional resume, job-specific resume, ATS resume, resume optimization',
     metadataBase: new URL(siteUrl),
@@ -83,14 +82,16 @@ export default function RootLayout({
 
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
+            <head>
                 <Script
                     id="structured-data"
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
+            </head>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
                 <GoogleAnalytics measurementId="G-9KQKV8ENKD" />
                 <Header />
                 <Suspense fallback={null}>
