@@ -68,14 +68,6 @@ export default function Footer() {
                         <h4 className="font-semibold text-white">Contact</h4>
                         <ul className="mt-4 space-y-2">
                             <li>
-                                <a
-                                    href="mailto:hello@resumegeniusai.com"
-                                    className="hover:text-white transition-colors"
-                                >
-                                    hello@fazume.com
-                                </a>
-                            </li>
-                            <li>
                                 <Link href="/cookie-policy">Cookie Policy</Link>
                             </li>
                             <li>

@@ -40,7 +40,10 @@ const PricingSection = () => {
                 {/* Pricing Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-sm mx-auto lg:max-w-none">
                     {/* --- One-Time Purchase Card --- */}
-                    <div className="border border-gray-200 rounded-xl p-8 flex flex-col">
+                    <div className="border-2 border-orange-500 rounded-xl p-8 flex flex-col relative shadow-lg">
+                        <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-md font-bold px-5 py-2 rounded-full uppercase tracking-wider">
+                            Best Value
+                        </div>
                         <h3 className="text-xl font-semibold text-gray-800">
                             Credit Packs
                         </h3>
@@ -50,7 +53,7 @@ const PricingSection = () => {
                         </p>
                         <Link
                             href="https://app.fazume.com/sign-up"
-                            className="mt-6 w-full border border-gray-800 text-gray-800 font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                            className="mt-6 w-full bg-orange-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors text-center"
                         >
                             Start for Free
                         </Link>
@@ -77,10 +80,7 @@ const PricingSection = () => {
                     </div>
 
                     {/* --- Monthly Plan Card --- */}
-                    <div className="border-2 border-orange-500 rounded-xl p-8 flex flex-col relative shadow-lg">
-                        <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                            Most Popular
-                        </div>
+                    <div className="border border-gray-200 rounded-xl p-8 flex flex-col">
                         <h3 className="text-xl font-semibold text-gray-800">
                             Monthly
                         </h3>
@@ -97,7 +97,7 @@ const PricingSection = () => {
                         </p>
                         <Link
                             href="https://app.fazume.com/sign-up"
-                            className="mt-6 w-full bg-orange-500 text-white font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors text-center"
+                            className="mt-6 w-full border border-gray-400 text-gray-600 font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors text-center"
                         >
                             Start for Free
                         </Link>
@@ -145,7 +145,7 @@ const PricingSection = () => {
                         </p>
                         <Link
                             href="https://app.fazume.com/sign-up"
-                            className="mt-6 w-full border border-gray-800 text-gray-800 font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                            className="mt-6 w-full border border-gray-400 text-gray-600 font-semibold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors text-center"
                         >
                             Start for Free
                         </Link>
