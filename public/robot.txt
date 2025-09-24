@@ -1,4 +1,0 @@
-# In public/robots.txt for the app.fazume.com project
-
-User-agent: *
-Disallow: /
