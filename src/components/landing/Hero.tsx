@@ -3,7 +3,6 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import Image from 'next/image';
 
 // --- Icon components remain the same ---
 const RocketIcon = () => (
@@ -27,7 +26,7 @@ const RocketIcon = () => (
 
 export default function Hero() {
     const heroContentRef = useRef<HTMLDivElement>(null);
-    const imageRef = useRef<HTMLDivElement>(null);
+    const videoRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -53,7 +52,7 @@ export default function Hero() {
                 '-=0.6',
             )
             .from(
-                imageRef.current,
+                videoRef.current,
                 { opacity: 0, y: 100, duration: 1.2 },
                 '-=0.8',
             );
@@ -96,8 +95,8 @@ export default function Hero() {
                                 d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                             ></path>
                         </svg>
-                        Limited Time Offer: Get <strong>7 free resumes</strong>{' '}
-                        when you sign up!
+                        Private Beta Offer: First 100 users get{' '}
+                        <strong>20 free credits</strong>!
                     </p>
 
                     <div className="mt-10">
@@ -112,17 +111,20 @@ export default function Hero() {
                 </div>
 
                 <div
-                    ref={imageRef}
+                    ref={videoRef}
                     className="relative max-w-5xl mx-auto mt-12 px-4"
                 >
-                    <Image
-                        src="/hero_image.png"
-                        alt="Screenshot of the Fazume app showing a tailored resume being generated from a master profile."
-                        layout="responsive"
-                        width={800}
-                        height={600}
-                        className="rounded-xl shadow-2xl"
-                    />
+                    {/* Aspect Ratio Box for Responsive Video */}
+                    <div className="relative h-0 pb-[56.25%] rounded-xl shadow-2xl overflow-hidden">
+                        <iframe
+                            src="https://www.youtube.com/embed/3_IX698PJdQ?si=dZMHg8tLGmxS2Pse&autoplay=1&mute=1&controls=1&rel=0&loop=1&playlist=3_IX698PJdQ"
+                            title="Fazume AI Demo Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                            className="absolute top-0 left-0 w-full h-full border-0"
+                        ></iframe>
+                    </div>
                 </div>
             </section>
         </>

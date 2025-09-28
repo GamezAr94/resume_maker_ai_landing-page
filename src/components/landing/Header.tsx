@@ -112,7 +112,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="bg-orange-500 text-white font-semibold text-sm py-1.5 px-4 rounded-full hover:bg-orange-600 transition-colors duration-300 shadow-sm"
                         >
-                            Get Started
+                            Get Started For Free
                         </a>
                     </div>
                 </div>

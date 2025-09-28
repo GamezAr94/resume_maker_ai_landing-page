@@ -19,8 +19,12 @@ const faqData = [
             'Other resume builders are just fancy templates. Generic AI (like ChatGPT) has no memory. You have to teach it who you are from scratch for every single application. Fazume learns from your master profile to act as your personal career expert.',
     },
     {
-        question: 'How does the "7 free resumes" offer work?',
-        answer: "Simple! When you create a free account, you get 7 resume credits added instantly. You can use these to generate fifteen complete, AI-tailored resumes to try out the full power of the platform. No credit card required, and the credits don't expire.",
+        question: 'How does the "20 free credits" beta offer work?',
+        answer: 'Simple! As a thank you for joining our private beta, you get 20 credits added to your account instantly when you sign up. You can use these to generate complete, AI-tailored resumes and try out the full power of the platform. No credit card is required.',
+    },
+    {
+        question: 'Can I edit the resume after the AI generates it?',
+        answer: 'Absolutely. The AI does the heavy lifting of tailoring and formatting, but you always have the final say. You can easily edit any section of the generated resume and download it as a professional, ready-to-use PDF',
     },
     {
         question: 'How much does Fazume cost after I use my free credits?',
@@ -33,6 +37,10 @@ const faqData = [
     {
         question: 'Is my data secure?',
         answer: 'Yes, we take your data security and privacy very seriously. All information is encrypted, and we will never share your personal career data with third parties. Your profile is for your eyes only.',
+    },
+    {
+        question: 'What does it mean to be a beta tester?',
+        answer: "As a beta tester, you get early, free access to our platform to help us find bugs and refine features. You'll be one of the first 100 users with a direct line to our development team to provide feedback that will shape the future of Fazume.",
     },
 ];
 

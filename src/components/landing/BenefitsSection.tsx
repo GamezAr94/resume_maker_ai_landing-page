@@ -235,7 +235,7 @@ export default function BenefitsSection() {
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                         From tedious task to career triumph. Here&apos;s how
-                        ResumeGenius AI transforms your job hunt.
+                        Fazume AI transforms your job hunt.
                     </p>
                 </div>
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -256,8 +256,8 @@ export default function BenefitsSection() {
                     />
                     <BenefitCard
                         icon={<IconCredits />}
-                        title="Start for Free"
-                        description="Get started with 7 free credits and see the results for yourself. No commitment required."
+                        title="Join the Beta"
+                        description="Get 20 free credits for joining the private beta. See the results for yourself, no commitment required."
                         iconBgColor="bg-red-100"
                         iconTextColor="text-red-600"
                     />

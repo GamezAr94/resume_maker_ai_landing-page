@@ -1,4 +1,6 @@
 import BenefitsSection from '@/components/landing/BenefitsSection';
+import BetaProgramSection from '@/components/landing/BetaPricing';
+import DemoSection from '@/components/landing/DemoSection';
 import FaqSection from '@/components/landing/Faq';
 import FounderStorySection from '@/components/landing/FounderStory';
 import Hero from '@/components/landing/Hero';
@@ -12,11 +14,15 @@ export default function Home() {
     return (
         <main>
             <Hero />
+
             <ProblemSection />
+
             {/* We'll give an ID to the "How it Works" section */}
             <div id="how-it-works">
                 <HowItWorksSection />
             </div>
+
+            <DemoSection />
 
             {/* The benefits section can be our "Features" */}
             <div id="features">
@@ -29,7 +35,8 @@ export default function Home() {
             </div>
 
             <div id="pricing">
-                <PricingSection />
+                {/*<PricingSection />*/}
+                <BetaProgramSection />
             </div>
 
             {/* And finally, the FAQ section */}
